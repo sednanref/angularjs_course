@@ -1,0 +1,38 @@
+-
+install grunt:
+     npm install -g grunt-cli
+     npm install grunt --save-dev
+-
+	npm install grunt-contrib-jshint --save-dev
+     npm install jshint-stylish --save-dev
+     npm install time-grunt --save-dev
+     npm install jit-grunt --save-dev
+The first one installs the Grunt module for JSHint, and the second one adds further to print out the messages from JSHint in a better format. The time-grunt module generates time statistics about how much time each task consumes, and jit-grunt enables us to include the necessary downloaded Grunt modules when needed for the tasks.
+-
+     npm install grunt-contrib-copy --save-dev
+     npm install grunt-contrib-clean --save-dev
+Grunt modules to copy over files to a distribution folder named dist, and clean up the dist folder when needed. 
+-
+     npm install grunt-contrib-concat --save-dev
+     npm install grunt-contrib-cssmin --save-dev
+     npm install grunt-contrib-uglify --save-dev
+     npm install grunt-filerev --save-dev
+     npm install grunt-usemin --save-dev
+We are now going to use the Grunt usemin module together with concat, cssmin, uglify and filerev to prepare the distribution folder
+-
+     npm install grunt-contrib-watch --save-dev
+     npm install grunt-contrib-connect --save-dev
+Grunt modules watch, connect and watch, to spin up a web server and keep a watch on the files and automatically reload the browser when any of the watched files are updated. 
+-
+    npm install -g gulp
+    npm install gulp --save-dev
+-
+	npm install jshint gulp-jshint jshint-stylish gulp-imagemin gulp-concat gulp-uglify gulp-minify-css gulp-usemin gulp-cache gulp-changed gulp-rev gulp-rename gulp-notify  browser-sync del --save-dev
+different gulp plugins
+-
+	npm install gulp-ng-annotate --save-dev
+	 gulp plugin named gulp-ng-annotate, which ensures the mangling does not cause any problems. We now need to add this plugin and update the gulpfile.js to include this plugin.
+-
+     bower install angular-route -S
+
+     For angular Route to work
