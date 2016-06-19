@@ -44,3 +44,10 @@ different gulp plugins
 -
     bower install angular-resource -S
         angular package with "resource", an easier way to work with $http.
+-
+    npm install jasmine-core --save-dev
+    npm install karma-cli -g
+    npm install karma-jasmine --save-dev
+    npm install phantomjs karma-phantomjs-launcher karma-chrome-launcher --save-dev
+    bower install angular-mocks -S
+        angular modules to do automated testing.
