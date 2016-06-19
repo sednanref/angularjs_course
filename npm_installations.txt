@@ -50,4 +50,8 @@ different gulp plugins
     npm install karma-jasmine --save-dev
     npm install phantomjs karma-phantomjs-launcher karma-chrome-launcher --save-dev
     bower install angular-mocks -S
-        angular modules to do automated testing.
+        angular modules to do unit automated testing.
+-
+    npm install protractor -g
+    webdriver-manager update
+        node module to execute e2e tests and webdriver to update web drivers.
