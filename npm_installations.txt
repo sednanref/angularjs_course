@@ -36,3 +36,7 @@ different gulp plugins
      bower install angular-route -S
 
      For angular Route to work
+
+-
+    npm install json-server -g
+        The Node module, json-server, provides a very simple way to set up a web server that supports a full-fledged REST API server
