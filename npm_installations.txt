@@ -40,3 +40,7 @@ different gulp plugins
 -
     npm install json-server -g
         The Node module, json-server, provides a very simple way to set up a web server that supports a full-fledged REST API server
+
+-
+    bower install angular-resource -S
+        angular package with "resource", an easier way to work with $http.

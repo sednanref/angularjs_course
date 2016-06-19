@@ -47,7 +47,7 @@
       "image": "images/zucchipakoda.png",
       "category": "appetizer",
       "label": "",
-      "price": "1.99",
+      "price": 1.99,
       "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
       "comments": [
         {
@@ -79,6 +79,48 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2016-06-19T04:27:54.600Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2016-06-19T04:28:00.961Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2016-06-19T04:28:02.904Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2016-06-19T04:28:04.040Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2016-06-19T04:28:07.817Z"
+        },
+        {
+          "rating": 5,
+          "comment": "waka waka eh eh",
+          "author": "waka",
+          "date": "2016-06-19T04:32:44.397Z"
+        },
+        {
+          "rating": 5,
+          "comment": "eh eh",
+          "author": "samira mira",
+          "date": "2016-06-19T04:32:54.321Z"
         }
       ]
     },
@@ -209,7 +251,5 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": [
-
-  ]
+  "feedback": []
 }
