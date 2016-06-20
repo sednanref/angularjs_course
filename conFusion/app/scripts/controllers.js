@@ -58,7 +58,7 @@ angular.module('confusionApp')
                         
         }])
 
-        .controller('FeedbackController', ['$scope', function($scope) {
+        .controller('FeedbackController', ['$scope', 'feedbackFactory', function($scope, feedbackFactory) {
             
             $scope.sendFeedback = function() {
                 
@@ -69,6 +69,7 @@ angular.module('confusionApp')
                     console.log('incorrect');
                 }
                 else {
+                    feedbackFactory.getFeedbacks().save($scope.feedback);
                     $scope.invalidChannelSelection = false;
                     $scope.feedback = {mychannel:"", firstName:"", lastName:"", agree:false, email:"" };
                     $scope.feedback.mychannel="";
@@ -113,7 +114,12 @@ angular.module('confusionApp')
         .controller('IndexController', ['$scope', 'menuFactory', 'corporateFactory', function($scope, menuFactory, corporateFactory) {
 
             $scope.showDish = false;
+            $scope.showPromotion = false;
+            $scope.showLeader = false;
             $scope.message="Loading ...";
+            $scope.message2="Loading ...";
+            $scope.message3="Loading ...";
+            
             $scope.dish = menuFactory.getDishes().get({id:0})
             .$promise.then(
                 function(response){
@@ -125,13 +131,44 @@ angular.module('confusionApp')
                 }
             );
 
-            $scope.monthPromotion = menuFactory.getPromotion(0);
-            $scope.culinarySpecialist = corporateFactory.getLeader(3);
+            $scope.monthPromotion = menuFactory.getPromotion().get({id:0})
+            .$promise.then(
+                function(response){
+                    $scope.monthPromotion = response;
+                    $scope.showPromotion = true;
+                },
+                function(response){
+                    $scope.message2 = "Error: "+response.status + " " + response.status.Text;
+                }
+            );
+
+            $scope.culinarySpecialist = corporateFactory.getLeaders().get({id:3})
+            .$promise.then(
+                function(response){
+                    $scope.culinarySpecialist = response;
+                    $scope.showLeader = true;
+                },
+                function(response){
+                    $scope.message3 = "Error: "+response.status + " " + response.statusText;
+                }
+            );
+
+
         }])
 
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
 
-            $scope.leadership = corporateFactory.getLeaders();
+            $scope.showLeadership = false;
+            $scope.message = "Loading ...";
+            corporateFactory.getLeaders().query(
+                function(response) {
+                    $scope.leadership = response;
+                    $scope.showLeadership = true;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
+                }
+            );
 
         }])
 
